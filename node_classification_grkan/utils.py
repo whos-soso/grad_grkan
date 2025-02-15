@@ -43,7 +43,7 @@ def load_data(dataset_name):
         dataset.val_masks = valid_mask.repeat(10,1)
         dataset.test_masks  = test_mask.repeat(10,1)
     elif dataset_name in ['Cora', 'CiteSeer']:
-        dataset = dataset = Planetoid(root, name=dataset_name)
+        dataset = Planetoid(root='data/'+dataset_name, name=dataset_name, transform=NormalizeFeatures())
         dataset.train_masks = dataset.train_mask.repeat(10,1)
         dataset.val_masks = dataset.val_mask.repeat(10,1)
         dataset.test_masks = dataset.test_mask.repeat(10,1)
