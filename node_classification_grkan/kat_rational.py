@@ -19,7 +19,7 @@ class KAT_Group(nn.Module):
         super(KAT_Group, self).__init__()
         assert device in ["cuda", "cpu"], "Device must be either 'cuda' or 'cpu'."
 
-        self.order = (6,5)
+        self.order = (5,4)
         self.num_groups = num_groups
 
         # Initialize weights based on the given mode
