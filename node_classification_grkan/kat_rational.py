@@ -7,7 +7,7 @@ import os
 
 
 class KAT_Group(nn.Module):
-    def __init__(self, num_groups=4, mode="gelu", device="cuda"):
+    def __init__(self, num_groups=8, mode="gelu", device="cuda"):
         """
         Initialize the KAT_Group module.
 
@@ -19,7 +19,7 @@ class KAT_Group(nn.Module):
         super(KAT_Group, self).__init__()
         assert device in ["cuda", "cpu"], "Device must be either 'cuda' or 'cpu'."
 
-        self.order = (5, 4)
+        self.order = (6,5)
         self.num_groups = num_groups
 
         # Initialize weights based on the given mode
